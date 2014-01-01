@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RecruitersDB" Class="RecruitersDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\RecruitersDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RecruitersDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Recruiters" Member="Recruiters">
+    <Type Name="Recruiter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyWebsite" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySize" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInUrl" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sprocAddRecruiter" Method="sprocAddRecruiter">
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="CompanyWebsite" Parameter="companyWebsite" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CompanySize" Parameter="companySize" Type="System.String" DbType="NVarChar(35)" />
+    <Parameter Name="CompanyLinkedInUrl" Parameter="companyLinkedInUrl" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CompanyLinkedInId" Parameter="companyLinkedInId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompanySpecialists" Parameter="companySpecialists" Type="System.String" DbType="NVarChar(450)" />
+    <Parameter Name="CategoryType" Parameter="categoryType" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="OfficeLocation" Parameter="officeLocation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactNumber" Parameter="contactNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="ContactEmail" Parameter="contactEmail" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="TwitterId" Parameter="twitterId" Type="System.String" DbType="NVarChar(80)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sprocUpdateRecruiter" Method="sprocUpdateRecruiter">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="CompanyWebsite" Parameter="companyWebsite" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CompanySize" Parameter="companySize" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="CompanyLinkedInUrl" Parameter="companyLinkedInUrl" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CompanyLinkedInId" Parameter="companyLinkedInId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompanySpecialists" Parameter="companySpecialists" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="CategoryType" Parameter="categoryType" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="OfficeLocation" Parameter="officeLocation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactNumber" Parameter="contactNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="ContactEmail" Parameter="contactEmail" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="TwitterId" Parameter="twitterId" Type="System.String" DbType="NVarChar(80)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sprocDeleteRecruiter" Method="sprocDeleteRecruiter">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sprocGetAdvancedFilteredRecruiterDetails" Method="sprocGetAdvancedFilteredRecruiterDetails">
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(80)" />
+    <Parameter Name="CompanySpecialists" Parameter="companySpecialists" Type="System.String" DbType="NVarChar(450)" />
+    <Parameter Name="CategoryType" Parameter="categoryType" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="OfficeLocation" Parameter="officeLocation" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sprocGetAdvancedFilteredRecruiterDetailsResult">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyWebsite" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySize" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInUrl" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetCategoryType" Method="sprocGetCategoryType">
+    <ElementType Name="sprocGetCategoryTypeResult">
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetCompanySpecialists" Method="sprocGetCompanySpecialists">
+    <ElementType Name="sprocGetCompanySpecialistsResult">
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetOfficeLocation" Method="sprocGetOfficeLocation">
+    <ElementType Name="sprocGetOfficeLocationResult">
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetRecruiterDetail" Method="sprocGetRecruiterDetail">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sprocGetRecruiterDetailResult">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyWebsite" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySize" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInUrl" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetRecruiterNames" Method="sprocGetRecruiterNames">
+    <Parameter Name="SearchString" Parameter="searchString" Type="System.String" DbType="VarChar(80)" />
+    <ElementType Name="sprocGetRecruiterNamesResult">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetRecruiters" Method="sprocGetRecruiters">
+    <ElementType Name="sprocGetRecruitersResult">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyWebsite" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySize" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInUrl" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sprocGetFilteredRecruiterDetails" Method="sprocGetFilteredRecruiterDetails">
+    <Parameter Name="CompanyName" Parameter="companyName" Type="System.String" DbType="NVarChar(80)" />
+    <ElementType Name="sprocGetFilteredRecruiterDetailsResult">
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyWebsite" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySize" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInUrl" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLinkedInId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanySpecialists" Type="System.String" DbType="NVarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryType" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="OfficeLocation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

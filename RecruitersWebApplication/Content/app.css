@@ -1,0 +1,103 @@
+﻿body {
+}
+
+#panel, #flip {
+    padding: 5px;
+    font-family: tahoma;
+    font-size: small;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-style: normal;
+    background-color: #211E12;
+    clear: both;
+    float: left;
+}
+
+#panel {
+    padding: 5px;
+    display: none;
+}
+#pageWrapper {
+    padding: 5px;
+    float: left;
+    clear: both;
+    width: 1050px;
+    height: auto;
+}
+#leftPanel {
+    float: left;
+    width: 330px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: #211E12;
+    height: 700px;
+    border-radius: 10px;
+}
+.lblForm {
+    margin: 5px 5px 5px 30px;
+    font-family: tahoma;
+    font-size: small;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-style: normal;
+    float: left;
+}
+#tbCompanyName {
+    margin: 5px 30px 30px 30px;
+    border: 1px solid #0066FF;
+    width: 250px;
+    height: 30px;
+    float: left;
+    background-color: #FFFFFF;
+}
+.ddlForm{
+    margin: 30px;
+    border: 1px solid #0000CC;
+    width: 250px;
+    height: 30px;
+    float: left;
+    clear: both;
+}
+#ddlCompanySpecialists {
+    margin: 30px;
+    border: 1px solid #0000CC;
+    width: 250px;
+    height: 100px;
+    float: left;
+    clear: both;
+}
+#btnSearch {
+    margin: 10px 30px 30px 30px;
+    background-color: #3366FF;
+    font-family: tahoma;
+    font-size: medium;
+    font-weight: normal;
+    color: #000000;
+    border: 1px solid #003300;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    float:left;
+    clear:both;
+}
+#btnAdvancedSearch {
+    margin: 10px 30px 30px 30px;
+    font-family: Tahoma;
+    font-size: small;
+    font-style: normal;
+    color: #000000;
+    background-color: #FFCC00;
+    border: 1px solid #00CCFF;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    float:left;
+    clear:both;
+}
+#displayData {
+    
+    float: left;
+    width: 700px;
+    margin-top: 5px;
+    margin-right: 5px;
+}

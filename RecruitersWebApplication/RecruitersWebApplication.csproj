@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{576F56E6-F07A-41ED-B54D-4402F1D4FA18}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RecruitersWebApplication</RootNamespace>
+    <AssemblyName>RecruitersWebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RecruitersDB.mdf" />
+    <Content Include="App_Data\RecruitersDB_log.ldf">
+      <DependentUpon>RecruitersDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\app.css" />
+    <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Content\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="development-bundle\AUTHORS.txt" />
+    <Content Include="development-bundle\demos\autocomplete\categories.html" />
+    <Content Include="development-bundle\demos\autocomplete\combobox.html" />
+    <Content Include="development-bundle\demos\autocomplete\custom-data.html" />
+    <Content Include="development-bundle\demos\autocomplete\default.html" />
+    <Content Include="development-bundle\demos\autocomplete\folding.html" />
+    <Content Include="development-bundle\demos\autocomplete\images\jqueryui_32x32.png" />
+    <Content Include="development-bundle\demos\autocomplete\images\jquery_32x32.png" />
+    <Content Include="development-bundle\demos\autocomplete\images\sizzlejs_32x32.png" />
+    <Content Include="development-bundle\demos\autocomplete\images\transparent_1x1.png" />
+    <Content Include="development-bundle\demos\autocomplete\images\ui-anim_basic_16x16.gif" />
+    <Content Include="development-bundle\demos\autocomplete\index.html" />
+    <Content Include="development-bundle\demos\autocomplete\london.xml" />
+    <Content Include="development-bundle\demos\autocomplete\maxheight.html" />
+    <Content Include="development-bundle\demos\autocomplete\multiple-remote.html" />
+    <Content Include="development-bundle\demos\autocomplete\multiple.html" />
+    <Content Include="development-bundle\demos\autocomplete\remote-jsonp.html" />
+    <Content Include="development-bundle\demos\autocomplete\remote-with-cache.html" />
+    <Content Include="development-bundle\demos\autocomplete\remote.html" />
+    <Content Include="development-bundle\demos\autocomplete\search.php" />
+    <Content Include="development-bundle\demos\autocomplete\xml.html" />
+    <Content Include="development-bundle\demos\demos.css" />
+    <Content Include="development-bundle\demos\images\calendar.gif" />
+    <Content Include="development-bundle\demos\images\demo-config-on-tile.gif" />
+    <Content Include="development-bundle\demos\images\demo-config-on.gif" />
+    <Content Include="development-bundle\demos\images\demo-spindown-closed.gif" />
+    <Content Include="development-bundle\demos\images\demo-spindown-open.gif" />
+    <Content Include="development-bundle\demos\images\icon-docs-info.gif" />
+    <Content Include="development-bundle\demos\images\pbar-ani.gif" />
+    <Content Include="development-bundle\demos\index.html" />
+    <Content Include="development-bundle\demos\menu\default.html" />
+    <Content Include="development-bundle\demos\menu\icons.html" />
+    <Content Include="development-bundle\demos\menu\index.html" />
+    <Content Include="development-bundle\demos\position\cycler.html" />
+    <Content Include="development-bundle\demos\position\default.html" />
+    <Content Include="development-bundle\demos\position\images\earth.jpg" />
+    <Content Include="development-bundle\demos\position\images\flight.jpg" />
+    <Content Include="development-bundle\demos\position\images\rocket.jpg" />
+    <Content Include="development-bundle\demos\position\index.html" />
+    <Content Include="development-bundle\demos\widget\default.html" />
+    <Content Include="development-bundle\demos\widget\index.html" />
+    <Content Include="development-bundle\docs\autocomplete.html" />
+    <Content Include="development-bundle\docs\jQuery.widget.html" />
+    <Content Include="development-bundle\docs\menu.html" />
+    <Content Include="development-bundle\docs\position.html" />
+    <Content Include="development-bundle\external\globalize.culture.de-DE.js" />
+    <Content Include="development-bundle\external\globalize.culture.ja-JP.js" />
+    <Content Include="development-bundle\external\globalize.js" />
+    <Content Include="development-bundle\external\jquery.mousewheel.js" />
+    <Content Include="development-bundle\external\jshint.js" />
+    <Content Include="development-bundle\external\qunit.css" />
+    <Content Include="development-bundle\external\qunit.js" />
+    <Content Include="development-bundle\Gruntfile.js" />
+    <Content Include="development-bundle\jquery-1.9.1.js" />
+    <Content Include="development-bundle\MIT-LICENSE.txt" />
+    <Content Include="development-bundle\themes\base\images\animated-overlay.gif" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="development-bundle\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="development-bundle\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="development-bundle\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="development-bundle\themes\base\jquery-ui.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.all.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.base.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.core.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.menu.css" />
+    <Content Include="development-bundle\themes\base\jquery.ui.theme.css" />
+    <Content Include="development-bundle\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="development-bundle\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="development-bundle\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="development-bundle\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="development-bundle\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="development-bundle\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="development-bundle\themes\start\images\animated-overlay.gif" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="development-bundle\themes\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="development-bundle\themes\start\jquery-ui.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.all.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.autocomplete.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.base.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.core.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.menu.css" />
+    <Content Include="development-bundle\themes\start\jquery.ui.theme.css" />
+    <Content Include="development-bundle\themes\start\minified\images\animated-overlay.gif" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_056b93_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="development-bundle\themes\start\minified\jquery-ui.min.css" />
+    <Content Include="development-bundle\themes\start\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="development-bundle\themes\start\minified\jquery.ui.core.min.css" />
+    <Content Include="development-bundle\themes\start\minified\jquery.ui.menu.min.css" />
+    <Content Include="development-bundle\themes\start\minified\jquery.ui.theme.min.css" />
+    <Content Include="development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="development-bundle\ui\jquery.ui.autocomplete.js" />
+    <Content Include="development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="development-bundle\ui\jquery.ui.menu.js" />
+    <Content Include="development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="development-bundle\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="development-bundle\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="development-bundle\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="development-bundle\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="development-bundle\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="development-bundle\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="RecruiterDetails.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Models\RecruitersDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RecruitersDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="development-bundle\package.json" />
+    <Content Include="development-bundle\README.md" />
+    <Content Include="development-bundle\ui.autocomplete.jquery.json" />
+    <Content Include="development-bundle\ui.core.jquery.json" />
+    <Content Include="development-bundle\ui.menu.jquery.json" />
+    <Content Include="development-bundle\ui.position.jquery.json" />
+    <Content Include="development-bundle\ui.widget.jquery.json" />
+    <None Include="Models\RecruitersDB.dbml.layout">
+      <DependentUpon>RecruitersDB.dbml</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="RecruiterService.asmx" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Interfaces\IRecruitersRepository.cs" />
+    <Compile Include="Models\RecruitersDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecruitersDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Repository\Recruiter.cs" />
+    <Compile Include="Models\Repository\RecruitersRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecruiterDetails.aspx.cs">
+      <DependentUpon>RecruiterDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecruiterDetails.aspx.designer.cs">
+      <DependentUpon>RecruiterDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecruiterService.asmx.cs">
+      <DependentUpon>RecruiterService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53222/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
