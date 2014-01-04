@@ -21,7 +21,7 @@ namespace RecruitersWebApplication
                 BindDropDownListCompanySpecialists();
                 BindDropDownListCategoryTypes();
                 BindDropDownListOfficeLocation();
-                btnAdvancedSearch.Enabled = false;
+                
             }
            
         }
@@ -61,10 +61,7 @@ namespace RecruitersWebApplication
 
            
 
-           if (gvRecruiters.Rows.Count == 0)
-           {
-               lbMsg.Text = "Sorry no valid result found.";
-           }
+          
 
             
         }
@@ -123,33 +120,24 @@ namespace RecruitersWebApplication
             recruiterRepository.GetOfficeLocation(ddlOfficeLocation);
         }
 
-        protected void btnAdvancedSearch_Click(object sender, EventArgs e)
-        {
-            if (ddlCompanySpecialists.SelectedIndex!= 0 || ddlCategoryType.SelectedIndex!= 0 || ddlOfficeLocation.SelectedIndex !=0)
-            {
-                BindGridViewAdvanced();
-            }
-            else
-            {
-                lbMsg.Text = "Please choose a valid option";
-            }
-            
-        }
-
+        
         protected void ddlCompanySpecialists_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCompanySpecialists.SelectedItem.Selected.ToString();
+            
             
         }
 
         protected void ddlCategoryType_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCategoryType.SelectedItem.Selected.ToString();
+            
         }
 
         protected void ddlOfficeLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlOfficeLocation.SelectedItem.Selected.ToString();
+            
         }
 
         protected void gvRecruiters_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -159,6 +147,14 @@ namespace RecruitersWebApplication
             BindGridViewAdvanced();
         }
 
+        protected void btnAdvancedSearch_Click(object sender, EventArgs e)
+        {
+            
+                BindGridViewAdvanced();
+            
+        }
+
+       
      
     }
 }

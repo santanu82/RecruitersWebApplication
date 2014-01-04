@@ -22,6 +22,15 @@ namespace RecruitersWebApplication {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// smRecruiterDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager smRecruiterDetails;
+        
+        /// <summary>
         /// tbCompanyName control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace RecruitersWebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAdvancedSearch;
+        
+        /// <summary>
+        /// upRecruiterDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upRecruiterDetails;
         
         /// <summary>
         /// gvRecruiters control.

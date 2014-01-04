@@ -40,8 +40,8 @@ namespace RecruitersWebApplication.Models.Repository
                     ContactNumber = r.ContactNumber,
                     ContactEmail = r.ContactEmail,
                     TwitterId = r.TwitterId
-                }).Where(r => r.CompanyName == recruiter.CompanyName && r.CompanySpecialists == recruiter.CompanySpecialists
-                                                     && r.CategoryType == recruiter.CategoryType && r.OfficeLocation == recruiter.OfficeLocation).AsEnumerable();
+                }).Where(r => r.CompanyName == recruiter.CompanyName || r.CompanySpecialists == recruiter.CompanySpecialists
+                                                     || r.CategoryType == recruiter.CategoryType || r.OfficeLocation == recruiter.OfficeLocation).AsEnumerable();
 
                 gridView.DataSource = recruitersInfoAdvanced;
 

@@ -2,7 +2,7 @@
 }
 
 #panel, #flip {
-    padding: 5px;
+    margin: 10px;
     font-family: tahoma;
     font-size: small;
     font-weight: normal;
@@ -94,10 +94,16 @@
     float:left;
     clear:both;
 }
-#displayData {
+#displayData,#upRecruiterDetails {
     
     float: left;
-    width: 700px;
+    width: 680px;
     margin-top: 5px;
     margin-right: 5px;
+}
+.gridRecruiters {
+   
+    float: left;
+    margin-right: 15px;
+    border-radius: 15px;
 }
